@@ -417,7 +417,6 @@ int main(int argc, char *argv[])
 
                     break;
                 case 7:
-
                     if (user->check == 0)
                     {
                         user->check = 1;
