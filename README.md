@@ -56,17 +56,17 @@ W przypadku programu serwera, struktura o nazwie "users" przechowuje informacje 
 
 Kompilacja
 ========
-Linux:
+Unix:
 
-<code>gcc -Wall inf145257_s.c -o serwer</code>
-<code>gcc -Wall inf145257_k.c -o klient</code>
+<code>gcc -Wall server.c -o server</code>\
+<code>gcc -Wall client.c -o client</code>
 
 Uruchamianie
 ========
 Uruchamianie programu rozpoczynamy od serwera:
 
-<code>./serwer</code>
+<code>./server</code>
 
 Następnie w każdym nowym oknie konsoli mamy możliwość uruchomienia programu klienta, komunikującego się z innymi uruchomionymi w ten sposób klientami (oczywiście pośrednio przez serwer):
 
-<code>./klient</code>
+<code>./client</code>
