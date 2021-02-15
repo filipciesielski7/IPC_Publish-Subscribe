@@ -46,7 +46,7 @@ Działanie polegające na wylogowaniu się z systemu przez klienta.
 
 Serwer
 ========
-Stworzony przeze mnie serwer dodatkowo wypisuje informacje o podejmowanych przez niego działaniach i ich skutkach, co było pomocne i wygodne w trakcie pisania czy wykonywania testów programu. Dodatkowo wprowadziłem ograniczenie czasowe jego działania, to znaczy, iż serwer będzie działał maksymalnie tyle sekund (po tym jak ostatni klient wyloguje się z systemu) ile wynosi wartość SERVER_STANDBY_TIME, którą można dowolnie konfigurować, a domyślnie ustawiona jest na 10 sekund.
+Stworzony serwer dodatkowo wypisuje informacje o podejmowanych przez niego działaniach i ich skutkach, co było pomocne i wygodne w trakcie pisania czy wykonywania testów programu. Dodatkowo wprowadzone zostało ograniczenie czasowe jego działania, to znaczy, iż serwer będzie działał maksymalnie tyle sekund (po tym jak ostatni klient wyloguje się z systemu) ile wynosi wartość SERVER_STANDBY_TIME, którą można dowolnie konfigurować, a domyślnie ustawiona jest na 10 sekund.
 
 Zawartość poszczególnych struktur
 ========
