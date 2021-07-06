@@ -1,5 +1,7 @@
 IPC Publish-Subscribe 💬
 ========
+Dostępne również w wersji po: ![English](README.md)
+
 Stworzony projekt zaliczeniowy pod tytułem "IPC Publish-Subscribe" pozwala na komunikację pomiędzy zalogowanymi użytkownikami systemu, przekazując ich rozgłaszane wiadomości na podstawie wcześniej zasubskrybowanych przez nich typów. Odpowiedzialny za poprawne działanie systemu jest serwer, przez który przechodzą wszystkie działania, a zatem również sama komunikacja pomiędzy klientami jest pośrednia, gdyż zawsze uczestniczy w niej wspomniany serwer.
 
 Funkcjonalność klienta
