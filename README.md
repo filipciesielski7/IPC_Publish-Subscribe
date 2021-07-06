@@ -1,1 +1,1 @@
-Also available in: ![Polski](README.md)
+Also available in: ![Polski](README.pl.md)
