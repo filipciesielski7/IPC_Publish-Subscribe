@@ -8,8 +8,8 @@ _Dostępne również w wersji po: [English](README.md)_
 
 Stworzony projekt zaliczeniowy pod tytułem "IPC Publish-Subscribe" pozwala na komunikację pomiędzy zalogowanymi użytkownikami systemu, przekazując ich rozgłaszane wiadomości na podstawie wcześniej zasubskrybowanych przez nich typów. Odpowiedzialny za poprawne działanie systemu jest serwer, przez który przechodzą wszystkie działania, a zatem również sama komunikacja pomiędzy klientami jest pośrednia, gdyż zawsze uczestniczy w niej wspomniany serwer.
 
-Funkcjonalność klienta
-========
+## Funkcjonalność klienta
+
 1. Logowanie
 
 Klient loguje się do systemu podając swój identyfikator oraz nazwę, co następnie zostaje przetworzone przez serwer, który wysyła informację zwrotną do klienta o rezultacie jego żądania. Możliwe rezultaty to informacja o pomyślnym logowaniu, informacja o tym, iż w systemie widnieje już użytkownik o takim identyfikatorze, informacja o tym, iż w systemie widnieje już użytkownik o takiej nazwie, informacja o tym, iż w systemie widnieje już taki użytkownik (podano zarówno identyfikator jak i nazwę widniejące już w systemie). W przypadku gdy klient otrzyma jedną z ostatnich trzech wymienionych informacji, ma on prawo do ponownej próby zalogowania się, lecz w przypadku gdy przekroczy on maksymalną liczbę prób (stała MAX_LOGIN_ATTEMPTS, którą można dowolnie konfigurować) domyślnie ustawioną na limit trzech, to serwer zablokuje możliwość kolejnych prób i zamknie program klienta. Istnieje jeszcze jeden możliwy komunikat od serwera w trakcie próby zalogowania się, jest to informacja o tym, iż serwer jest zapełniony, co oznacza, że do systemu zalogowali się użytkownicy w liczbie określonej przez stałą MAX_NUMBER_OF_USERS, którą również można dowolnie zmieniać i domyślnie ustawiona jest na pięciu klientów.
@@ -50,25 +50,25 @@ Działanie polegające na zablokowaniu danego użytkownika, to znaczy brak odbio
 
 Działanie polegające na wylogowaniu się z systemu przez klienta.
 
-Serwer
-========
+## Serwer
+
 Stworzony serwer dodatkowo wypisuje informacje o podejmowanych przez niego działaniach i ich skutkach, co było pomocne i wygodne w trakcie pisania czy wykonywania testów programu. Dodatkowo wprowadzone zostało ograniczenie czasowe jego działania, to znaczy, iż serwer będzie działał maksymalnie tyle sekund (po tym jak ostatni klient wyloguje się z systemu) ile wynosi wartość SERVER_STANDBY_TIME, którą można dowolnie konfigurować, a domyślnie ustawiona jest na 10 sekund.
 
-Zawartość poszczególnych struktur
-========
+## Zawartość poszczególnych struktur
+
 W przypadku programu klienta, struktura o nazwie "user" przechowuje informacje o identyfikatorze i nazwie danego użytkownika, jego subskrypcjach czy zablokowanych przez niego innych użytkownikach. Struktura o nazwie "messages", przechowuje zawsze chwilowo odebrane przez klienta wiadomości wraz z ich priorytetami w celu ich posortowania do odpowiedniego wyświetlenia według priorytetu.
 
 W przypadku programu serwera, struktura o nazwie "users" przechowuje informacje o ilości, identyfikatorach czy nazwach wszystkich zalogowanych użytkowników. Struktura o nazwie "messages_types" przechowuje informacje o identyfikatorach i nazwach typów wiadomości, użytkownikach (identyfikatory i nazwy) i sposobie subskrypcji odpowiednich typów wiadomości przez tych użytkowników (wraz z ilością odbieranych wiadomości w przypadku subskrypcji przejściowej). 
 
-Kompilacja
-========
+## Kompilacja
+
 Unix:
 
 <code>gcc -Wall server.c -o server</code>\
 <code>gcc -Wall client.c -o client</code>
 
-Uruchamianie
-========
+## Uruchamianie
+
 Uruchamianie programu rozpoczynamy od serwera:
 
 <code>./server</code>
