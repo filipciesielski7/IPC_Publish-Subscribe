@@ -1,6 +1,10 @@
-IPC Publish-Subscribe 💬
-========
-Also available in: [Polski](README.pl.md)
+<h1 align="center">
+    IPC Publish-Subscribe 💬
+</h1>
+
+_Also available in: [Polski](README.pl.md)_
+
+## About
 
 Project called "IPC Publish-Subscribe" allows logged-in users of the system to communicate between each other by transmitting their broadcast messages based on their previously subscribed types. Responsible for proper operation of the system is the server through which all activities pass, and therefore the communication between clients is indirect, as the server mentioned is always involved in it.
 
