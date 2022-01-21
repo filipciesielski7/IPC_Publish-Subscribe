@@ -6,18 +6,18 @@ _Also available in: [Polski](README.pl.md)_
 
 ## About
 
-Project called "IPC Publish-Subscribe" allows logged-in users of the system to communicate between each other by transmitting their broadcast messages based on their previously subscribed types. Responsible for proper operation of the system is the server through which all activities pass, and therefore the communication between clients is indirect, as the server mentioned is always involved in it.
+The "IPC Publish-Subscribe" project allows logged-in users of the system to communicate with each other by transmitting their broadcast messages based on types to which they previously subscribed. A server is responsible for proper operation of the system and all activities pass through it.
 
 ## Client functionality
 
 1. Login to the system
 2. Display the menu
 3. Display available messages types to subscribe
-4. Registration to the broadcast system
-5. Registration of message type
+4. Register to the broadcast system
+5. Register a message type
 6. Broadcast new message
-7. Synchronous receive of the message
-8. Asynchronous receive of the message
+7. Receive a message synchronously
+8. Receive a message asynchronously
 9. Block a user
 10. Logout from the system
 
